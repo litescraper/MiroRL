@@ -47,7 +47,7 @@ def make_serper_request(
 ) -> requests.Response:
     """Make HTTP request to Serper API with retry logic."""
     response = requests.post(
-        "https://google.serper.dev/search", json=payload, headers=headers
+        f'{os.getenv("SERPER_BASE_URL", "https://google.serper.dev").rstrip("/")}/search', json=payload, headers=headers
     )
     response.raise_for_status()
     return response

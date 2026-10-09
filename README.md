@@ -221,3 +221,12 @@ If you want to define your custom mcp tool, please refer to the [define_your_mcp
 ## License
 
 This project is released under the [Apache License 2.0](LICENSE). Please also adhere to the Licenses of models and datasets being used.
+
+
+## Serper-compatible endpoints
+
+Set `SERPER_BASE_URL` to a compatible API base (without a search route) and
+use that provider's key in the existing Serper API-key configuration. The
+base defaults to `https://google.serper.dev`; trailing slashes are removed
+before adding the existing route. Separate page-scraping endpoints are unchanged.
+Support any Serper.dev-compatible endpoint (like litescrape.com, serpbase.dev, serpensapi.org, and others).
